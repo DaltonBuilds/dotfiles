@@ -11,7 +11,8 @@ echo "🚀 Bootstrapping development environment..."
 # Install chezmoi if not already available
 if ! command -v chezmoi >/dev/null 2>&1; then
     echo "📦 Installing chezmoi..."
-    sh -c "$(curl -fsLS get.chezmoi.io)"
+    sh -c "$(curl -fsLS get.chezmoi.io)" -- -b "$HOME/.local/bin"
+    export PATH="$HOME/.local/bin:$PATH"
 fi
 
 # Apply dotfiles from the locally cloned repo
