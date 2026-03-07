@@ -1,0 +1,5 @@
+[tools]
+starship = "latest"
+
+[settings]
+experimental = true
