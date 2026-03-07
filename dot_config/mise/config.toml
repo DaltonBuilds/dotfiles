@@ -1,5 +1,8 @@
 [tools]
 starship = "latest"
+ripgrep = "latest"
+fd = "latest"
+bat = "latest"
 
 [settings]
 experimental = true

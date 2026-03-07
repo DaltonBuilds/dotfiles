@@ -1,0 +1,17 @@
+#!/bin/bash
+# This script automatically runs whenever dot_config/mise/config.toml changes
+# packages hash: {{ include "dot_config/mise/config.toml" | sha256sum }}
+
+set -euo pipefail
+
+echo "📦 Mise config changed - installing/updating tools..."
+
+# Trust the mise config if mise is available
+if [ -f "$HOME/.local/bin/mise" ]; then
+    "$HOME/.local/bin/mise" trust "$HOME/.config/mise/config.toml" 2>/dev/null || true
+    "$HOME/.local/bin/mise" install
+    echo "✅ Mise tools updated!"
+else
+    echo "⚠️  Mise not found at ~/.local/bin/mise - skipping tool installation"
+    echo "   (This is normal during initial bootstrap - tools will be installed by setup script)"
+fi

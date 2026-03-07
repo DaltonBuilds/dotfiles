@@ -1,0 +1,4 @@
+[".local/bin/chezmoi"]
+type = "file"
+executable = true
+url = "https://github.com/twpayne/chezmoi/releases/latest/download/chezmoi-{{.chezmoi.os}}-{{.chezmoi.arch}}"

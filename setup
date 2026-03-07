@@ -2,8 +2,20 @@
 
 set -euo pipefail
 
+echo "🚀 Bootstrapping development environment..."
+
+# Install chezmoi and apply dotfiles if not already done
 if ! command -v chezmoi >/dev/null; then
+    echo "📦 Installing chezmoi and applying dotfiles..."
     sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:DaltonBuilds/dotfiles.git
 fi
 
+# Install mise tools if mise binary is available
+if [ -f "$HOME/.local/bin/mise" ]; then
+    echo "🔧 Installing baseline tools (starship, ripgrep, fd, bat)..."
+    eval "$("$HOME/.local/bin/mise" activate bash)"
+    "$HOME/.local/bin/mise" install
+fi
+
+echo "✅ Development environment ready! Open a new shell to activate all tools."
 exit 0
