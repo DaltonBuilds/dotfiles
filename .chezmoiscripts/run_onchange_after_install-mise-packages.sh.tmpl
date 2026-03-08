@@ -9,7 +9,7 @@ echo "📦 Mise config changed - installing/updating tools..."
 # Trust the mise config if mise is available
 if [ -f "$HOME/.local/bin/mise" ]; then
     "$HOME/.local/bin/mise" trust "$HOME/.config/mise/config.toml" 2>/dev/null || true
-    "$HOME/.local/bin/mise" install
+    "$HOME/.local/bin/mise" install || echo "⚠️  Some mise tools failed to install (non-fatal)"
     echo "✅ Mise tools updated!"
 else
     echo "⚠️  Mise not found at ~/.local/bin/mise - skipping tool installation"
