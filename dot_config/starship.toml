@@ -1,5 +1,17 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+[gcloud]
+disabled = true
+
+[aws]
+disabled = true
+
+[azure]
+disabled = true
+
+[openstack]
+disabled = true
+
 [bun]
 format = "via [$symbol]($style)"
 
