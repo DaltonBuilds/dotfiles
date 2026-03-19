@@ -2,6 +2,7 @@
 starship = "latest"
 ripgrep = "latest"
 bat = "latest"
+cilium-cli = "latest"
 
 [settings]
 experimental = true
