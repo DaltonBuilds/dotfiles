@@ -4,6 +4,7 @@ ripgrep = "latest"
 bat = "latest"
 cilium-cli = "latest"
 helm = "latest"
+cosign = "latest"
 
 [settings]
 experimental = true
