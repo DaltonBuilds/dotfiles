@@ -3,6 +3,7 @@ starship = "latest"
 ripgrep = "latest"
 bat = "latest"
 cilium-cli = "latest"
+helm = "latest"
 
 [settings]
 experimental = true
