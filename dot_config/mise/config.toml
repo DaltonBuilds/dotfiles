@@ -5,6 +5,8 @@ bat = "latest"
 cilium-cli = "latest"
 helm = "latest"
 cosign = "latest"
+gcloud = "latest"
+awscli = { version = "latest", symlink_bins = "true" }
 
 [settings]
 experimental = true
