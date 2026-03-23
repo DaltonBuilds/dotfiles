@@ -8,6 +8,7 @@ cosign = "latest"
 gcloud = "latest"
 awscli = { version = "latest", symlink_bins = "true" }
 cloudflared = "latest"
+"github:fluxcd/flux2" = "latest"
 
 [settings]
 experimental = true
