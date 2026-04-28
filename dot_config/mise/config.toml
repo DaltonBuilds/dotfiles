@@ -1,0 +1,12 @@
+[tools]
+starship = "latest"
+ripgrep = "latest"
+bat = "latest"
+cilium-cli = "latest"
+helm = "latest"
+cosign = "latest"
+gh = "latest"
+k9s = "latest"
+
+[settings]
+experimental = true
