@@ -7,6 +7,9 @@ helm = "latest"
 cosign = "latest"
 gh = "latest"
 k9s = "latest"
+neovim = "latest"
+fd = "latest"
+lazygit = "latest"
 
 [settings]
 experimental = true
